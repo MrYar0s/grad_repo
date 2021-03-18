@@ -74,22 +74,22 @@ def runningPattern(pattern, direction):
     if(direction == 1):
         while True:
             lightNumber(pattern)
-            pattern = (pattern >> 1) % 255
+            if((pattern // 2)*2 != pattern):
+                pattern += 2**num_bits
+            pattern = pattern >> 1
             time.sleep(1)
 
-p = GPIO.PWM(D[3], 50)
-p.start(0)
-try:
-    while 1:
+def PWM(freq):            
+    p = GPIO.PWM(D[3], frec)
+    p.start(0)
+    while True:
         for dc in range(0, 101, 5):
             p.ChangeDutyCycle(dc)
             time.sleep(0.1)
         for dc in range(100, -1, -5):
             p.ChangeDutyCycle(dc)
             time.sleep(0.1)
-except KeyboardInterrupt:
-    pass
-p.stop()
+    p.stop()
 
 #runningPattern(15, -1)
 #lightUp(3, 2)

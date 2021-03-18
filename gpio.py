@@ -79,8 +79,8 @@ def runningPattern(pattern, direction):
             pattern = pattern >> 1
             time.sleep(1)
 
-def PWM(freq):            
-    p = GPIO.PWM(D[3], frec)
+def PWM(ledNumber, freq):            
+    p = GPIO.PWM(D[ledNumber], frec)
     p.start(0)
     while True:
         for dc in range(0, 101, 5):

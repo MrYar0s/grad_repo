@@ -10,7 +10,7 @@ def makesin(time, freq, samplingFrequency):
 	times = [0 for i in range(npoints)]
 	for i in range(0, npoints, 1):
 		rads[i] = freq * step * np.pi * i
-		cords[i] = abs(int(256 * math.sin(rads[i])))
+		cords[i] = (int(128 * (math.sin(rads[i]) + 1)))
 		times[i] = step * i
 	plt.plot(times, cords)
 	plt.title('Синусоида')
@@ -18,3 +18,4 @@ def makesin(time, freq, samplingFrequency):
 	plt.ylabel('Значения напряжения')
 	plt.show()
 	return cords
+makesin(10, 1, 100)

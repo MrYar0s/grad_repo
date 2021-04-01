@@ -4,3 +4,5 @@
 2. LibreOffice
 3. MATLAB
 4. Commit другого пользователя
+5. GPIO файл
+6. DAC

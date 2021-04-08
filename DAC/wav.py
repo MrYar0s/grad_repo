@@ -85,10 +85,11 @@ maximum = float(maximum / 10)
 minimum = float(minimum / 10)
 
 cords = [0 for i in range(number)]
+read = [0 for i in range(npoints)]
 
 for i in range(0, number, 1):
-    data[i, 1] = float(data[i, 1] / 10)
-    cords[i] = int(256 * (data[i,1] - minimum)/(maximum - minimum))
+    read[i] = float(data[i, 1] / 10)
+    cords[i] = int(256 * (read[i] - minimum)/(maximum - minimum))
 
 time = np.linspace(0., length, data.shape[0])
 plt.plot(time, cords[:])

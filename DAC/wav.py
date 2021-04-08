@@ -7,8 +7,7 @@ import matplotlib.pyplot as plt
 import math
 import scipy.io
 import RPi.GPIO as GPIO
-import time
-
+import tm
 
 num_bits = 8
 
@@ -99,4 +98,4 @@ plt.show()
 
 for i in range(0, number, 1):
     num2dac(cords[i])
-    time.sleep(samperiod)
+    tm.sleep(samperiod)

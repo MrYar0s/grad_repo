@@ -85,7 +85,7 @@ maximum = float(maximum / 10)
 minimum = float(minimum / 10)
 
 cords = [0 for i in range(number)]
-read = [0 for i in range(npoints)]
+read = [0 for i in range(number)]
 
 for i in range(0, number, 1):
     read[i] = float(data[i, 1] / 10)

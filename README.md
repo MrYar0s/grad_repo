@@ -1,9 +1,12 @@
 Молоканов Ярослав Романович Б01-006
-Репозиторий содержит семь папок:
-1. Git
-2. LibreOffice
-3. MATLAB
-4. Commit другого пользователя
-5. GPIO файл
-6. DAC
-7. ADC
+Репозиторий содержит 5 папок и 3 файла:
+Папки:
+   1. ADC
+   2. DAC
+   3. Git
+   4. LibreOffice
+   5. MATLAB
+Файлы:
+   1. gpio.py (скрипты к занятию по gpio)
+   2. Hello from Nigeria with LOVE (Commit другого пользователя)
+   3. README.md (README файл, который вы сейчас читаете)

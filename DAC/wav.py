@@ -1,5 +1,3 @@
-#Forth script
-
 from os.path import dirname, join as pjoin
 from scipy.io import wavfile
 import numpy as np
@@ -7,7 +5,7 @@ import matplotlib.pyplot as plt
 import math
 import scipy.io
 import RPi.GPIO as GPIO
-import tm
+import time as tm
 
 num_bits = 8
 
@@ -62,7 +60,7 @@ def makesin(time, freq, samplingFrequency):
     plt.show()
     return cords
 
-samplerate, data = wavfile.read("/home/mryaros/Documents/grad_repo/DAC/SOUND.WAV")
+samplerate, data = wavfile.read("/home/student/Desktop/ADC/DAC/SOUND.WAV")
 
 print("Частота дискретизации = ", samplerate)
 print(f"Количество каналов = {data.shape[1]}")
@@ -98,4 +96,4 @@ plt.show()
 
 for i in range(0, number, 1):
     num2dac(cords[i])
-    tm.sleep(samperiod)
+    tm.sleep(0)
